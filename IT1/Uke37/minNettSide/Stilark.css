@@ -1,0 +1,50 @@
+
+
+body{background-color: #e9e9e9e9;
+color:black;}
+
+img{
+  width: 50%;
+  display:block;
+margin: auto;
+}
+
+
+header{
+  width: 300px;
+
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+
+
+
+h1{color:Brown;
+
+}
+p{font-size: 20px
+
+}
+
+main{width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+ul{list-style-type: none;
+  margin-left: 0px;
+}
+li{
+  display: inline;
+
+}
+li a{
+  text-decoration:none;
+background-color: lightgreen;
+padding: 20px;
+border-radius: 10px;
+margin: 20px;
+color: black;
+}
