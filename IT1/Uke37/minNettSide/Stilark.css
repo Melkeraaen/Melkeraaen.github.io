@@ -10,7 +10,7 @@ margin: auto;
 }
 
 
-header{
+header>h1{
   width: 300px;
 
 margin-left: auto;
@@ -28,23 +28,34 @@ p{font-size: 20px
 }
 
 main{width: 60%;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 
 }
 
-ul{list-style-type: none;
+ul{
+text-align: center;
   margin-left: 0px;
 }
 li{
   display: inline;
 
+  text-align: center;
+
 }
 li a{
   text-decoration:none;
 background-color: lightgreen;
-padding: 20px;
+padding: 15px;
 border-radius: 10px;
-margin: 20px;
+margin: 12px;
 color: black;
+
+}
+p{
+border-style: solid;
+border-color: white;
+color: black;
+
 }
