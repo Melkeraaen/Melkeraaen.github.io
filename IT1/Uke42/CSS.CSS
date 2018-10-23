@@ -1,0 +1,29 @@
+
+
+
+}
+body{background-color:#ffc04c;
+}
+
+
+
+img{width: 50%auto;
+display: block;
+margin:auto;}
+
+header>h1{
+text-align: center;}
+
+
+h1{color:black}
+
+
+
+
+main{width: 60%;
+margin-left: auto;
+margin-right: auto;
+background-image: url("https://www.google.no/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwidtJSslsTdAhVhwIsKHdn2AFYQjRx6BAgBEAU&url=https%3A%2F%2Fillvit.no%2Funiverset%2Fsolsystemet%2Fsolsystemet-gravitasjonen-raar&psig=AOvVaw1-bE4XemBvI7oHOq4CVYcb&ust=1537347089713525");
+}
+
+li{display: inline;}
