@@ -1,0 +1,41 @@
+
+body{
+  background-color:rgb(95, 182, 185);
+  margin: 0;
+  background-image: url(https://static1.squarespace.com/static/5469fc78e4b07ab395a7e532/548ae138e4b04f6e8e830794/548aeb33e4b0dec5b0258910/1423490683147/?format=1500w);
+}
+
+
+main{
+  margin: auto;
+  width: 80%;
+}
+main img{
+  width: 90%;
+}
+
+
+.gridtur{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.kartbilde{
+  display: grid;
+  grid-column: span 1;
+  margin-top: 5vw;
+
+}
+
+.googlemap{
+  display: grid;
+  grid-column: span 2;
+
+}
+.Turbeskrivelse{
+  grid-column: span 2;
+  margin-top: 2vw;
+  color:white;
+  background-color: rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+}

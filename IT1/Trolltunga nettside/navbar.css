@@ -1,0 +1,39 @@
+header{
+  background-image: url(https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+}
+#logo{
+font-size: 2.6vw;
+margin: auto;
+color: white;
+
+}
+
+#logolink{
+  line-height: 4.2vw;
+}
+
+.navbar{
+  display: grid;
+  grid-template-columns: repeat(6,20%);
+  text-decoration: none;
+  margin: auto;
+  text-align: center;
+  line-height: 3.5vw;
+  color: white;
+  font-style: italic;
+}
+
+.navknapp{
+  text-decoration: none;
+  color:rgb(252, 252, 252) ;
+  font-size: 1.7;
+  transition: 0.7s;
+  line-height: 4.2vw;
+}
+
+.navknapp:hover{
+  background-color: rgb(59, 59, 59);
+  transition: 0.7s;
+  color: grey;
+}
