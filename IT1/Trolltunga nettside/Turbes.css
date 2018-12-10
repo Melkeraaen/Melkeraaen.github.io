@@ -36,6 +36,6 @@ main img{
   grid-column: span 2;
   margin-top: 2vw;
   color:white;
-  background-color: rgba(0, 0, 0, 0.22);
+  background-color: rgba(0, 0, 0, 0.26);
   border-radius: 10px;
 }

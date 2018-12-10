@@ -1,5 +1,4 @@
 body{
-  background-color:rgb(95, 182, 185);
   margin: 0;
   background-image: url(https://static1.squarespace.com/static/5469fc78e4b07ab395a7e532/548ae138e4b04f6e8e830794/548aeb33e4b0dec5b0258910/1423490683147/?format=1500w);
 }
@@ -81,8 +80,9 @@ grid-column: span 1;
 
 .Nyttiginfo{
   grid-column: span 1;
-  background-color: rgb(148, 148, 148);
+  background-color: rgba(0, 0, 0, 0.26);
   border-radius: 20px;
+  color: white;
 }
 
 .Nyttiginfo > p {
