@@ -14,27 +14,30 @@
   <body>
     <header>
 
-      <nav class="navbar">
-        <a id="logo" href="Hovedside.html"><div id="logolink" > Trolltunga Online</div></a>
 
-        <a class="navknapp" href="Hovedside.html">Hjem</a>
-        <a class="navknapp" href="Turbeskrivelse.html">Turbeskrivelse</a>
-        <a class="navknapp" href="Bilder.html">Bilder</a>
-        <a class="navknapp" href="overnatting.html">Overnatting</a>
+      <ul>
+        <li><a id="logo" href="Hovedside.html"><div id="logolink" > <img src="logo1.jpg" alt="logo"> Trolltunga Online</div></a></li>
+        <li><a class="navknapp" href="Hovedside.html">Hjem</a></li>
+        <li class="dropdown">
+          <a class="navknapp" href="Turbeskrivelse.html" class="dropbtn">Turbeskrivelse</a>
+          <div class="dropdown-content">
+            <a href="Utstyr.html">Utstyr</a>
+          </div>
+          <li><a class="navknapp" href="Bilder.html">Bilder</a></li>
+          <li><a class="navknapp" href="overnatting.html">Overnatting </a></li>
+        </li>
+      </ul>
 
-
-      </nav>
 
   </header>
 
   <main>
 
 
-
     <section class="gridHoved">
 
       <section class="Tunga">
-        <a href="#">
+        <a href="Bilder.html">
           <h2>Bilder</h2>
         <img src="selvetunga.jpg" alt="Tunga">
         </a>
@@ -58,14 +61,13 @@
       </section>
 
       <section class="Hotel">
-        <a href="#">
+        <a href="overnatting.html">
         <h2>Hardanger Hotel</h2>
-        <img src="Hotel2.jpg" alt="hardangerhotel">
+        <img src="hotel.jpg" alt="hardangerhotel">
         </a>
       </section>
 
       <section class="Nyttiginfo">
-        <a href="#">
         <h2>Nyttig info</h2>
         </a>
         <p> LENGDEN PÅ TUREN ER 20.2KM</p>
@@ -79,6 +81,20 @@
 
   <footer>
 
+      <hr>
+
+      <p>
+        Kontaktinfo:
+
+        <a  href="mailto:eliasmelkeraaen.com" target="_top" style="color:rgb(59, 204, 91);"> <b> eliasmelkeraaen@gmail.com</b></a>
+
+        &nbsp &nbsp &nbsp &nbsp Created by Elias Melkeraaen
+
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp ©2018 trolltungaonline.com All Rights Reserved
+      </p>
+
   </footer>
+
+
   </body>
 </html>

@@ -1,4 +1,3 @@
-
 body{
   background-color:rgb(125, 122, 126);
   margin: 0;
@@ -9,42 +8,41 @@ main{
   margin: auto;
   width: 80%;
 }
-
 main img{
-  width: 130%;
+  width: 90%;
 }
 
+.gridutstyr{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
 
-.gridtur{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.kartbilde{
-
-  grid-column: span 1;
-  margin-top: 2vw;
 
 }
-
-.googlemap{
-
+.utstyr{
   grid-column: span 2;
-
-}
-.Turbeskrivelse{
-  grid-column: span 2;
-  margin-top: 2vw;
-  color:black;
+  grid-row: span 2;
   background-color: rgba(0, 0, 0, 0.26);
-  border-radius: 10px;
+  border-radius: 20px;
+  color: black;
+  margin-top: 5vw;
+
 }
 
-.Turbeskrivelse > p {
+.utstyr > p {
   margin-left: 20px;
   margin-right: 20px;
 }
 
 h2{
   margin-left: 20px;
+}
+
+.tursekk{
+  margin-top: 4vw;
+  grid-column: span 1;
+  margin-left: 2vw;
+}
+footer{
+
+  margin-top: 16vw;
 }
