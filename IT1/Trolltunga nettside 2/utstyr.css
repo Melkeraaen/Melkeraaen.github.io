@@ -1,0 +1,48 @@
+body{
+  background-color:rgb(125, 122, 126);
+  margin: 0;
+  background-image: url(water.jpg);
+  }
+
+main{
+  margin: auto;
+  width: 80%;
+}
+main img{
+  width: 90%;
+}
+
+.gridutstyr{
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+
+
+}
+.utstyr{
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: rgba(0, 0, 0, 0.26);
+  border-radius: 20px;
+  color: black;
+  margin-top: 5vw;
+
+}
+
+.utstyr > p {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h2{
+  margin-left: 20px;
+}
+
+.tursekk{
+  margin-top: 4vw;
+  grid-column: span 1;
+  margin-left: 2vw;
+}
+footer{
+
+  margin-top: 16vw;
+}

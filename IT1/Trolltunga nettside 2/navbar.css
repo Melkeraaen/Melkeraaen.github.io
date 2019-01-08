@@ -1,0 +1,99 @@
+header{
+  background-image: url(https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+}
+#logo{
+  font-size: 2.6vw;
+  margin: auto;
+  color: white;
+
+}
+
+#logolink{
+  line-height: 4.2vw;
+}
+
+
+
+.navknapp{
+  text-decoration: none;
+  color:rgb(252, 252, 252) ;
+  font-size: 1.7;
+  transition: 0.7s;
+  line-height: 5vw;
+  width: 10vw;
+}
+
+.navknapp:hover{
+  background-color: rgb(59, 59, 59);
+  width: 10vw;
+  transition: 0.7s;
+  color: grey;
+}
+
+
+
+ul {
+  background-image: url(https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 26% repeat(5,15%);
+  text-decoration: none;
+  margin: auto;
+  text-align: center;
+  line-height: 3.5vw;
+  color: white;
+  font-size: 1.5vw;
+}
+
+
+
+
+
+li a, .dropbtn {
+  display: inline-block;
+  color: gray;
+  text-align: center;
+  padding: 10px 12px;
+  text-decoration: none;
+  }
+
+
+
+
+.dropdown {
+  position: relative;
+  padding-left: 3vw;
+
+  }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: grey}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+footer {
+  margin-left: 5vw;
+  display: block;
+  color: white;
+  margin-bottom: 3.5vw;
+}

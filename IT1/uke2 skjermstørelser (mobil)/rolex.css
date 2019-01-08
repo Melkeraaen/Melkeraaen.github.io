@@ -1,0 +1,56 @@
+main{
+  width: 90%;
+  margin-top: 5vw;
+
+}
+img{
+  width: 100%;
+}
+
+.grid{
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+@media(max-width:900px){
+  .grid{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media(max-width:700px){
+  .grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media(max-width:500px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
+
+
+header > nav{
+  display: flex;
+  flex-direction: row;
+  justfy-content: space-around;
+}
+
+@media(max-width:500px){
+  header>nav{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*Overskrifter*/
+h1,h3{
+  text-align: center;
+}
+/* --- */
+
+/* Størrelse-boks */
+
+
+
+/*--------*/

@@ -1,0 +1,54 @@
+body{
+  background-color:rgb(125, 122, 126);
+  margin: 0;
+  background-image: url(water.jpg);
+  }
+
+header{
+  background-image: url(https://images.pexels.com/photos/8892/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+  background-size: cover;
+}
+
+main{
+  margin: auto;
+  width: 80%;
+}
+
+
+div div a:hover{
+  color: grey;
+}
+
+main img{
+  width: 90%;
+}
+
+h2{
+  padding-left: 50px;
+  color: black;
+}
+
+.gridbilder{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+
+
+.bilde1{
+  grid-column: span 2;
+}
+
+
+.bilde2{
+  grid-column: span 2;
+  margin-top: 4.7vw;
+}
+
+.bilde3{
+  grid-column: span 2;
+  margin-top: 3vw;
+}
+.bilde4{
+  grid-column: span 2;
+  margin-top: 3vw;
+}
