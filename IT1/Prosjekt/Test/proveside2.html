@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB4ZoTMOnwZ2WOEZYFtvSHdeMz9SSKYJak",
+    authDomain: "testscore-f6eee.firebaseapp.com",
+    databaseURL: "https://testscore-f6eee.firebaseio.com",
+    projectId: "testscore-f6eee",
+    storageBucket: "",
+    messagingSenderId: "238895073154"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<script type="text/javascript"</script>
+var db = firebase.database();
+var spiller = db.ref("Spiller");*/
+spiller.on("child_added", function(data, prevChildKey) {
+var spiller = data.val();
+   console.log("Name: " + spiller.Name);
+   console.log("Score: " + spiller.Score);
+   console.log("Neste Spiller: " + prevChildKey);
+});
+
+function load(){
+  tblNavn.innerHTML += `
+  <tr>
+      <td> Hei </td>
+      <td>${spiller.Name}</td>
+      <td>${spiller.Score}</td>
+  </tr>
+  `;
+}
+</script>
+
+  <body onload="load()">
+    <h2> Welcome to play first to 21</h2>
+    <h2>Toppscore</h2>
+    <table><tbody id="tblNavn"></tbody></table>
+</body>
+</html>

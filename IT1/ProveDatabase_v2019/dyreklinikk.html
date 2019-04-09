@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dyreklinikken</title>
+    <!-- Lim inn kode fra firebase her -->
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyACmq3tPxQkzVCavzanEXrYOerNsHAnCFw",
+        authDomain: "proveidatabaser.firebaseapp.com",
+        databaseURL: "https://proveidatabaser.firebaseio.com",
+        projectId: "proveidatabaser",
+        storageBucket: "proveidatabaser.appspot.com",
+        messagingSenderId: "397009840202"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+<link rel="stylesheet" href="Dyreklinikken.css">
+
+  </head>
+  <body>
+    <header>
+      <h1>Dyr</h1>
+      <nav>
+        <button type="button" name="button" onclick="Alfabetisk()">Oppgave 3a</button> <!-- Gjør ferdig koblingene for alle knappene -->
+        <button type="button" name="button" onclick="eldstehunder()">Oppgave 3b</button>
+        <button type="button" name="button" onclick="alleBeigeDyr()">Oppgave 3c</button>
+        <button type="button" name="button" onclick="AlfabetiskAlleDyr()">Oppgave 3d</button>
+      </nav>
+    </header>
+    <main>
+
+
+
+    <script type="text/javascript">
+      //Referanse til HTML-elementet main.
+      const main = document.querySelector("main");
+
+      //Referanser til databasen. MÅ FYLLES UT!
+      //OBS! Husk at hunder ligger under "dyr/hunder" i databasen, og katter ligger under "dyr/katter"
+      const db = firebase.database();//Fyll ut referanse til firebase databasen her!!
+      const dyr = db.ref("dyr");
+      const hunder = db.ref("dyr/hunder");//Fyll ut referanse til hunder i databasen her!!
+      const katter = db.ref("dyr/katter");//Fyll ut referanse til katter i databasen her!!
+
+      visAlleDyr(); // Funksjon som kjøres når siden lastes
+
+      // Funksjon som viser alle dyr
+      function visAlleDyr(){
+        main.innerHTML = ``; // sletter innholdet i main.
+        hunder.on("child_added",genererHTML);
+        katter.on("child_added",genererHTML);
+      }
+
+
+      // MÅ FYLLES UT!!
+      // Lag egne funksjoner som tilfredstiller spørringene i oppgave 3A, 3B, 3C og 3D her:
+
+      function Alfabetisk(){
+      main.innerHTML = ``;
+      katter.orderByChild("navn").limitToLast(10).on("child_added",genererHTML);
+    }
+
+      function eldstehunder(){
+      main.innerHTML = ``;
+      hunder.orderByChild("alder").limitToLast(3).on("child_added",genererHTML);
+    }
+
+      function alleBeigeDyr(){
+      main.innerHTML=``;
+      hunder.orderByChild("farge1").equalTo("Beige").on("child_added",genererHTML);
+      hunder.orderByChild("farge2").equalTo("Beige").on("child_added",genererHTML);
+      katter.orderByChild("farge1").equalTo("Beige").on("child_added",genererHTML);
+      katter.orderByChild("farge2").equalTo("Beige").on("child_added",genererHTML);
+
+      }
+
+      function AlfabetiskAlleDyr(){
+        main.innerHTML=``;
+        dyr.orderByChild("navn").limitToLast(20).on("child_added",genererHTML);
+      }
+
+
+
+
+
+
+
+      // Javascript-funksjon for å generere HTML-kode for hunder og katter, la denne være som den er.
+      function genererHTML(snapshot){
+        let key = snapshot.key; // Lagrer primærnøkkelen som kommer fra firebase-spørringen i en variabel
+        let objekt = snapshot.val(); // Lagrer objektet som kommer fra firebase-spørringen i en variabel
+        let farge; // Oppretter en variabel for fargen på hunden/katten
+        if(objekt.farge2){ // Hvis hunden/katten har en farge2 gjør følgende:
+          farge = `${objekt.farge1} og ${objekt.farge2.toLowerCase()}`; // variabelen farge er lik farge1 og farge2
+        }else{ //Hvis ikke hunden/katten har en farge2 gjør følgende:
+          farge = objekt.farge1; //variabelen farge er lik farge1
+        }
+        //Koden under legger til innholdet i objektet til main-elementet sammen med litt HTML-kode
+        //Hver katt/hund blir et article-element med klassen dyr
+        main.innerHTML +=`
+            <article class="dyr">
+              <h1>${objekt.navn}</h1>
+              <img src="bilder/${objekt.bilde}" alt="">
+              <p>Farge: ${farge}</p>
+              <p>Alder: ${objekt.alder}</p>
+            </article>
+        `;
+      }
+
+      </script>
+
+
+    </main>
+  </body>
+</html>

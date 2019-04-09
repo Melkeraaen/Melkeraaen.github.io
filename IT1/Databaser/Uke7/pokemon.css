@@ -1,0 +1,6 @@
+body{
+  background-color: ;
+}
+#secAllePokemon{
+  grid-template-columns: 1fr 1fr;
+}

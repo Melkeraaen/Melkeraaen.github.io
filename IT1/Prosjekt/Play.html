@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="terning.css">
+<link rel="stylesheet" href="tabell.css">
+<link rel="stylesheet" href="play.css">
+<script src="main.js"></script>
+</head>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBa6s-zpO_t8qULfVrmudAUplivaQtAdjE",
+      authDomain: "toppscore-ad02c.firebaseapp.com",
+      databaseURL: "https://toppscore-ad02c.firebaseio.com",
+      projectId: "toppscore-ad02c",
+      storageBucket: "",
+      messagingSenderId: "319445726429"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+<script type="text/javascript" src="Scoredb.json"></script>
+     <script type="text/javascript" >
+        function load() {
+             var mydata = JSON.parse(data);
+             var div = document.getElementById('data');
+             for(var i = 0;i < mydata.length; i++)
+             {
+                div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].Name +"  "+ mydata[i].Score+" </p>" + "<br>";
+             }
+         }
+</script>
+
+  <body onload="load()">
+    <header>
+
+
+      <ul>
+        <li><a href="index.html"><div> <img src="terninglogo.png" alt="logo"></div></a></li>
+        <li><a class="navknapp" href="index.html">Home</a></li>
+          <li><a class="navknapp" href="Play.html">Play</a></li>
+          <li><a class="navknapp" href="Merch.html">Merch</a></li>
+          <li><a class="navknapp" href="Cretor.html">Creator</a></li>
+
+        </li>
+      </ul>
+    </header>
+
+
+<section class="center">
+
+    <h2> Welcome to play first to 21</h2>
+    <div>
+      <h3>
+        Name for Player A: <input id="inputNameA"  type="text" name="Name player A " placeholder="Write name for player A">
+        &nbsp;
+        &nbsp;
+        Name for Player B: <input id="inputNameB" type="text" name="Name player B: " placeholder="Write name for player B">
+        &nbsp;
+        &nbsp;
+         <input id="submit" type="submit" onclick="namePlayers()" onsubmit="namePlayers()">
+      </h3>
+    </div>
+        <table style="width:60%">
+        <tr>
+          <td>
+            <h3 id="playerA" ></h3>
+            <div id="die1" class="dice">0</div>
+            <button onclick="rollDice1()">Roll dice</button>
+            <button onclick="save1()">Save</button>
+            <h4 id="status1" ></h4>
+
+          </td>
+          <td>
+            <h3 id="playerB" ></h3>
+            <div id="die2" class="dice">0</div>
+            <button onclick="rollDice2()">Roll dice</button>
+            <button  onclick="save2()">Save</button>
+            <h4 id="status2"></h4>
+          </td>
+        </tr>
+        </table>
+      <!--  <div class="score">
+            <h2>Toppscore</h2>
+            <div id= "data">
+        </div>-->
+  </section>
+</body>
+
+
+</html>

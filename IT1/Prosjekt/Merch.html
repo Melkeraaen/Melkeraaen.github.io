@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Merch</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="Merch.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBXyh6l5_8ZJJwKA6239CAjpuvtHCQZpHI",
+        authDomain: "merch-f1357.firebaseapp.com",
+        databaseURL: "https://merch-f1357.firebaseio.com",
+        projectId: "merch-f1357",
+        storageBucket: "merch-f1357.appspot.com",
+        messagingSenderId: "732869790936"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li><a href="index.html"><div> <img src="terninglogo.png" alt="logo"></div></a></li>
+        <li><a class="navknapp" href="index.html">Home</a></li>
+        <li><a class="navknapp" href="Play.html">Play</a></li>
+        <li><a class="navknapp" href="Merch.html">Merch</a></li>
+        <li><a class="navknapp" href="cretor.html">Creator</a></li>
+
+        </li>
+      </ul>
+    </header>
+    <main>
+      <div>
+        <button type="button" class="button" name="button" onclick="vis21merch()">21 Merch</button>
+        <button type="button" class="button" name="button"  onclick="visDiceMerch()">Dice Merch</button>
+      </div>
+      <div id="merch">
+
+      </div>
+    </main>
+
+<script type="text/javascript">
+const merch = document.querySelector("#merch");
+
+const db = firebase.database();
+const merch21 = db.ref("Klær/21Merch");
+const diceMerch = db.ref("Klær/DiceMerch");
+
+function genererHTML(snapshot){
+  let key = snapshot.key;
+  let merchSnap = snapshot.val();
+  merch.innerHTML += `
+    <section>
+      <img src="${merchSnap.Image}" width="30%"></img>
+      <h4>${merchSnap.Price}</h4>
+      <h2>${merchSnap.Name}</h2>
+    </section>
+  `;
+}
+
+visMerch();
+
+function visMerch(){
+  merch.innerHTML = ``;
+  merch21.on("child_added", genererHTML);
+  diceMerch.on("child_added", genererHTML);
+}
+
+function vis21merch(){
+  merch.innerHTML = ``;
+  merch21.on("child_added", genererHTML);
+}
+
+function visDiceMerch(){
+  merch.innerHTML = ``;
+  diceMerch.on("child_added", genererHTML);
+}
+
+
+
+</script>
+  </body>
+</html>

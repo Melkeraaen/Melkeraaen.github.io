@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon2</title>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBqqB-AAe99TmHxS8HV8QG6pJ-WL05pfZs",
+        authDomain: "pokemon-b9ca3.firebaseapp.com",
+        databaseURL: "https://pokemon-b9ca3.firebaseio.com",
+        projectId: "pokemon-b9ca3",
+        storageBucket: "pokemon-b9ca3.appspot.com",
+        messagingSenderId: "480786797052"
+      };
+      firebase.initializeApp(config);
+    </script>
+<style media="screen">
+
+  #secPokemon{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    width: 90%;
+
+  }
+
+  .pokemon{
+    background-color: lightgray;
+  }
+
+  #secPokemon img{
+    width: 100%;
+  }
+
+  .button{
+    
+    color: blue;
+  }
+
+</style>
+
+  </head>
+
+<body>
+
+  <header>
+    <button type="button" name="button" onclick="vis20SterkestePokemon()">vis sterkeste Pokemon</button>
+    <button type="button" name="button" onclick="visAllePokemon()">vis alle pokemon</button>
+        <button type="button" name="button" onclick="vis10SvakestePokemon()">vis svakeste pokemon</button>
+
+  </header>
+
+  <main>
+    <section id="secPokemon">
+
+    </section>
+
+    <script type="text/javascript">
+    // Referanser til html
+      const secAllePokemon = document.querySelector("#secPokemon");
+
+
+    // Referere til firebase
+      const db = firebase.database();
+      const pokemon = db.ref("pokemon");
+
+
+    //pokemon.on("child_added",genererHTML)
+
+
+
+      function visAllePokemon(){
+        secAllePokemon.innerHTML = ``;
+        pokemon.on("child_added",genererHTML);
+      }
+
+      function vis20SterkestePokemon(){
+          secAllePokemon.innerHTML =``;
+          pokemon.orderByChild("Max CP").limitToLast(20).on("child_added",genererHTML);
+      }
+
+      function vis10SvakestePokemon(){
+          pokemon.orderByChild("Max HP").limitToFirst(10).on("child_added",genererHTML);
+      }
+
+      function genererHTML(snapshot){
+        let key = snapshot.key;
+        let poke = snapshot.val();
+          secAllePokemon.innerHTML += `
+            <section class="pokemon">
+            <h3>${key}:${poke["Name"]}</h3>
+            <img src=${poke["Image URL"]}>
+            <p>Type: ${poke["Type 1"]}</p>
+            <p>Max HP: ${poke["Max HP"]}</p>
+            <p>Max CP: ${poke["Max CP"]}</p>
+            </section>
+        `
+      }
+
+
+    </script>
+  </main>
+
+</body>
+</html>

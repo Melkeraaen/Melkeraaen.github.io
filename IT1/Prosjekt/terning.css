@@ -1,0 +1,23 @@
+button{
+  background-color:rgb(0, 0, 0);
+  border-radius: 0.6vw;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 1vw;
+  width: 6vw;
+  margin-top: 6vw;
+}
+div.dice{
+	float:left;
+	width:4vw;
+  height:3.7vw;
+	background:#F5F5F5;
+  background-color:rgb(181, 98, 30) ;
+	border:#999 1px solid;
+	padding:1vw;
+	font-size:3vw;
+	text-align:center;
+	margin:1vw;
+  margin-left: 6vw;
+  margin-top: 5vw;
+}

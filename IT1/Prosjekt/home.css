@@ -1,0 +1,39 @@
+body{
+  background-color: rgb(238, 238, 238);
+
+}
+
+main{
+  margin-left: 10vw;
+  margin-top: 10vw;
+
+}
+
+p{
+  font-family: verdana;
+  font-size: 0.1;
+}
+
+.PlayButton1{
+  background-color:rgb(69, 30, 11) ;
+  border-radius: 0.6vw;
+  color: rgb(255, 255, 255);
+  font-size: 2vw;
+  padding: 1vw;
+  padding-left: 7vw;
+  padding-right: 7vw;
+  text-decoration: none;
+
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  margin-left: 24vw;
+  margin-top: 5vw;
+}
+
+.HowToPlay{
+  grid-column: span 1;
+  margin-top: 5vw;
+}
