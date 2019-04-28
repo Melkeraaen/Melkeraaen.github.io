@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bestilling</title>
+    <link rel="stylesheet" href="CSSfiler/navbar.css">
+    <link rel="stylesheet" href="CSSfiler/Merch.css">
+    <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+
+
+  </head>
+<!-- Html for Bestilling av Klær -->
+  <body>
+<!-- Navigasjonsbar til siden -->
+    <header>
+      <ul>
+        <li><a href="index.html"><div> <img src="Bilder/terninglogo.png" id="logo" alt="logo"></div></a></li>
+        <li><a class="navknapp" href="index.html">Home</a></li>
+        <li><a class="navknapp" href="Play.html">Play</a></li>
+        <li><a class="navknapp" href="Merch.html">Merch</a></li>
+        <li><a class="navknapp" href="Chat.html">Chat</a></li>
+
+        </li>
+      </ul>
+    </header>
+
+    <main>
+
+      <div class="regestrering">
+
+<!-- Regestreings form for Bestilling -->
+
+      <form action="takkforbes.html">
+
+        <label><h2> Registration of order</h2></label>
+        <label for="inputFNavn">Firstname:</label>
+        <input id="inputNavn" type="text" name="Fnavn" placeholder="Firstname" required>
+
+             &nbsp &nbsp &nbsp
+
+        <label for="inputENavn">Lastname:</label>
+        <input id="inputNavn" type="text" name="Enavn" placeholder="Lastname" required>
+
+            <br>
+            <br>
+
+        <label for="inputalder">Adress:</label>
+        <input id="inputalder" type="text" name="Adresse" placeholder="Adress" required>
+
+            <br>
+            <br>
+
+        <label for="inputFNavn">Email:</label>
+        <input id="inputNavn" type="text" name="Zcode" placeholder="Email" required>
+
+
+            <br>
+            <br>
+
+        <label for="inputFNavn">Zip code:</label>
+        <input id="inputNavn" type="text" name="Zcode" placeholder="Zip code" required>
+
+            &nbsp &nbsp &nbsp
+
+        <label for="inputENavn"> City:</label>
+        <input id="inputNavn" type="text" name="Cnavn" placeholder="City" required>
+
+            <br>
+            <br>
+
+
+<!-- select liste med de ulike produktene -->
+
+            <select>
+
+              <option value="">Select item</option>
+              <option value="21 darkblue">21 darkblue</option>
+              <option value="21 White">21 White</option>
+              <option value="21 Black">21 Black</option>
+              <option value="21 Hoodie">21 Hoodie</option>
+              <option value="Dice Black">Dice Black</option>
+              <option value="Dice Purple">Dice Purple</option>
+              <option value="Dice Polo">Dice Polo</option>
+              <option value="Dice Hoodie">Dice Hoodie</option>
+
+            </select>
+
+            <br>
+
+          <br>
+
+<!-- Velger størelse med radiobutton -->
+
+      <input  type="radio" name="rbsize" value="Small"><label for="rbS">S</label>
+      <input type="radio" name="rbsize" value="Medium"><label for="rbM"> M</label>
+      <input type="radio" name="rbsize" value="Large"><label for="rbL">L</label>
+
+      <br>
+
+  <!-- Sendes videre til takkforbes.html -->
+
+      <button type="submit" name="Regestreingsknapp">Send</button>
+
+      </form>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="Scoredb.json"></script>
+             <script type="text/javascript" >
+                function load() {
+                     var mydata = JSON.parse(data);
+                     var div = document.getElementById('data');
+                     for(var i = 0;i < mydata.length; i++)
+                     {
+                        div.innerHTML = div.innerHTML + "<p class='inner' id="+i+">"+ mydata[i].Name +"  "+ mydata[i].Score+" </p>" + "<br>";
+                     }
+                 }
+        </script>
+    </head>
+    <body onload="load()">
+      <section class="center">
+
+          <h2> Welcome to play first to 21</h2>
+          <div>
+            <h3>
+              Name for Player A: <input id="inputNameA"  type="text" name="Name player A " placeholder="Write name for player A">
+              &nbsp;
+              &nbsp;
+              Name for Player B: <input id="inputNameB" type="text" name="Name player B: " placeholder="Write name for player B">
+              &nbsp;
+              &nbsp;
+               <input id="submit" type="submit" onclick="namePlayers()" onsubmit="namePlayers()">
+            </h3>
+          </div>
+          <h2>Toppscore</h2>
+          <div id= "data">
+          </div>
+
+          <table style="width:60%">
+          <tr>
+            <td>
+              <h3 id="playerA" >Tester Spiller1</h3>
+              <h4 id="status1" >Tester Status1</h4>
+
+            </td>
+            <td>
+              <h3 id="playerB" > Tester Spiller2</h3>
+              <h4 id="status2">Tester  Status2</h4>
+            </td>
+          </tr>
+          </table>
+
+
+      </section>
+
+    </body>
+</html>

@@ -1,0 +1,18 @@
+/*  */
+
+table, th, td {
+  border: 0.1vw solid grey;
+}
+
+/*  */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/*  */
+
+th {
+  height: 5vw;
+}

@@ -4,45 +4,45 @@
         "001": {
             "Name": "21 darkblue",
             "Price": "8.5$",
-            "Image": "Shorte.png"
+            "Image": "Bilder/Shorte.png"
           },
           "002": {
               "Name": "21 White",
               "Price": "8.5$",
-              "Image": "hvit-21.png"
+              "Image": "Bilder/hvit-21.png"
             },
             "003": {
                 "Name": "21 Black ",
                 "Price": "8.5$",
-                "Image": "Svart 21.png"
+                "Image": "Bilder/Svart 21.png"
             },
              "004": {
                 "Name": "21 Hoodie ",
                 "Price": "35$",
-                "Image": "Black Hoodie.png"
+                "Image": "Bilder/Black Hoodie.png"
 
               }
         },
         "DiceMerch":{
               "001": {
-                 "Name": "dice Black ",
+                 "Name": "Dice Black ",
                  "Price": "8.5$",
-                 "Image": "Blackdice.png"
+                 "Image": "Bilder/Blackdice.png"
                 },
                 "002": {
                   "Name": "Dice Purple",
                   "Price": "8.5$",
-                  "Image": "pupledice.png"
+                  "Image": "Bilder/pupledice.png"
                 },
                 "003": {
                      "Name": "Dice Polo",
                       "Price": "12$",
-                      "Image": "Polodice.png"
+                      "Image": "Bilder/Polodice.png"
                     },
                   "004": {
                       "Name": "Dice Hoodie ",
                       "Price": "35$",
-                      "Image": "hoodiedice.png"
+                      "Image": "Bilder/hoodiedice.png"
 
             }
       }

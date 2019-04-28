@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="nb" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+
+<form id="skjema"> 
+<input type="text" id="inpAvsender" required placeholder="Hvem er du?">
+<input type="text" id="inpMening" required placeholder="Hva sier du?">
+<button type="submit" class="button">OK</button>
+</form>
+
+<section id="txtMeldinger"></section>
+
+<script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+<script>
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBa6s-zpO_t8qULfVrmudAUplivaQtAdjE",
+  authDomain: "toppscore-ad02c.firebaseapp.com",
+  databaseURL: "https://toppscore-ad02c.firebaseio.com",
+  projectId: "toppscore-ad02c",
+  storageBucket: "toppscore-ad02c.appspot.com",
+  messagingSenderId: "319445726429"
+};
+firebase.initializeApp(config);
+</script>
+
+<script>
+
+let database = firebase.database();
+let meldinger = database.ref("meldinger");
+let skjema = document.getElementById("skjema");
+
+let inpAvsender = document.getElementById("inpAvsender");
+
+let inpMening = document.getElementById("inpMening");
+
+let txtMeldinger = document.getElementById("txtMeldinger");
+
+function visMelding(snapshot) {
+let melding = snapshot.val();
+let meldingTekst = `<p>
+<b>${melding.avsender}: </b>
+<i>${melding.tekst}</i>
+</p>`;
+txtMeldinger.innerHTML = txtMeldinger.innerHTML + meldingTekst;
+}
+
+function regNyMelding(evt) {
+evt.preventDefault();
+  let nyMelding = {
+    avsender: inpAvsender.value,
+    tekst: inpMening.value
+  };
+meldinger.push(nyMelding);
+inpMening.value = "";
+}
+
+meldinger.on("child_added", visMelding);
+skjema.onsubmit = regNyMelding;
+</script>
+
+</body>
+</html>

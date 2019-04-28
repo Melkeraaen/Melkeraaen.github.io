@@ -1,0 +1,68 @@
+
+/*Plaseringen og utseende av kurv elemntet */
+#kurv{
+ margin-top: 2vw;
+ width: 55%;
+ margin-left: 10vw;
+ text-align:center;
+
+}
+
+/* Farge og størrelse på p elemntet på siden */
+p{
+  color: black;
+  font-size: 14pt;
+}
+
+/*Plaseringen av knappnen og Bestillingskurven på siden */
+.plassering{
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.6fr;
+  grid-column: 3;
+  grid-gap: 3vw;
+  margin-right: 6vw;
+}
+
+/* Utsende pog størrelse på knappene */
+.button {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 1vw 2.5vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.6vw;
+  margin: 0.4vw 0.2vw;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  margin-left: 20vw;
+  margin-top: 6vw;
+  box-shadow: 0 1.2vw 1.6vw 0 rgba(0,0,0,0.24),0 1.7vw 5vw 0 rgba(0,0,0,0.19);
+}
+
+/*Plaseringen av produktene som listes på siden */
+#merch{
+  display: grid;
+  grid-template-columns: 0.9fr 1fr;
+  grid-row-gap: 5vw;
+  margin-left: 22vw;
+  margin-top: 5vw;
+
+}
+
+/* Plasering og størrelse av regestrering på siden Bestilling.html */
+.regestrering{
+  margin-left: 10vw;
+  margin-top: 10vw;
+  font-family: 'Teko', sans-serif;
+  font-size: 20px;
+  margin-bottom: 2vw;
+
+}
+
+/* Pasering av teksten på siden takkforbes.html */
+.respons{
+  margin-left: 10vw;
+  margin-top: 5vw;
+}

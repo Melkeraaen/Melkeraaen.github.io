@@ -1,0 +1,52 @@
+
+/* Gjør at menylinjen er like bred som siden */
+body{
+  margin: 0;
+}
+
+/* Bakrundsbilde til menylinjen */
+header{
+background-size: cover;
+background-image: url(https://3dexport.com/items/2017/08/17/464228/177032/20_dark_wood_background_textures_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_1909494_o.jpg);
+}
+
+/* Størrelse på teringlogo på menylinjen */
+#logo{
+  width: 6vw;
+}
+
+/* utseende til hvert menyvalg på menylinjen */
+.navknapp{
+  text-decoration: none;
+  color:rgb(252, 252, 252) ;
+  font-size: 2;
+  transition: 0.7s;
+  line-height: 5vw;
+  width: 12vw;
+  margin-left: 20vw;
+}
+
+/* Størelsen på menyboksene */
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns:  0.7% repeat(4,19%);
+  text-decoration: none;
+  margin: auto;
+  text-align: center;
+  line-height: 3.5vw;
+  color: white;
+  font-size: 2vw;
+}
+
+/* Gjør elmentene markeres når muse er over */
+.navknapp:hover{
+  background-color: rgba(156, 58, 16, 0.65);
+  color: white;
+}
+
+li a, .btn {
+  display: inline-block;
+  padding: 1vw 1.2vw;
+  text-decoration: none;
+  }

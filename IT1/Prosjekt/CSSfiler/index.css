@@ -1,0 +1,65 @@
+
+/*Plaseringen av innholdet på siden */
+main{
+  margin-left: 10vw;
+  margin-right: 15vw;
+  margin-top: 5vw;
+}
+
+/* Skrivstørelse til p elementene */
+p{
+  font-family: verdana;
+  font-size: 0.1;
+}
+
+/* Fjerner understrek til linker/anchor*/
+a{
+  text-decoration: none;
+}
+
+/* Fargen på h2 elemnter på siden */
+h2{
+  color: black;
+}
+
+/* utseende til logo og knap som linker til spillet */
+.PlayButton1{
+  background-color:rgb(69, 30, 11) ;
+  border-radius: 0.6vw;
+  color: rgb(255, 255, 255);
+  font-size: 1.5vw;
+  padding: 0.5vw;
+  padding-left: 8.5vw;
+  padding-right: 8.5vw;
+  text-decoration: none;
+}
+
+/* Plasering på siden */
+.grid1{
+  display: grid;
+  grid-gap: 1vw;
+  grid-template-columns: repeat(3,1fr);
+}
+
+/* Plaserin av logo og Playbutton */
+.logo21{
+  grid-column: 1;
+  width: 50%;
+}
+
+/* Plasering av merch link */
+.Merchg{
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Plasering av infomasjon om hvordan spille */
+.HowToPlay{
+  margin-top: 1.5vw;
+  grid-column: span 2;
+}
+
+/* Plasirina av chat link */
+.chat{
+    grid-column: 6;
+}
